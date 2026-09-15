@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% block title %}Complaint Submitted - City Complaint Tracker{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-lg-6">
+        <div class="card shadow-sm text-center success-card">
+            <div class="card-body p-5">
+                <div class="success-icon mb-3">✅</div>
+                <h2 class="card-title mb-2">Complaint submitted successfully!</h2>
+                <p class="text-muted mb-4">Save this ID to track your complaint.</p>
+
+                <div class="tracking-id-box mb-4">
+                    <div class="small text-uppercase text-muted mb-1">Your Tracking ID</div>
+                    <div class="tracking-id-value">{{ tracking_id }}</div>
+                </div>
+
+                {% if complaint %}
+                <div class="row g-2 justify-content-center mb-4 text-start">
+                    <div class="col-auto">
+                        <span class="badge status-badge severity-{{ complaint.severity | lower }}">
+                            Severity: {{ complaint.severity }}
+                        </span>
+                    </div>
+                    <div class="col-auto">
+                        <span class="badge status-badge bg-secondary">
+                            Routed to: {{ complaint.department }}
+                        </span>
+                    </div>
+                    {% if complaint.is_duplicate %}
+                    <div class="col-12 text-center mt-2">
+                        <span class="badge status-badge bg-info text-dark">
+                            Possibly related to existing report {{ complaint.duplicate_of }}
+                        </span>
+                    </div>
+                    {% endif %}
+                </div>
+                {% endif %}
+
+                <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+                    <a href="{{ url_for('track') }}" class="btn btn-primary px-4">Track Complaint</a>
+                    <a href="{{ url_for('index') }}" class="btn btn-outline-secondary px-4">Submit Another Complaint</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,183 @@
+/* ---------- Base ---------- */
+body {
+    background-color: #f4f6f9;
+    color: #212529;
+}
+
+/* ---------- Navbar ---------- */
+.app-navbar {
+    background: linear-gradient(90deg, #0d47a1, #1565c0);
+}
+
+.app-footer {
+    color: #6c757d;
+}
+
+/* ---------- Cards ---------- */
+.form-card, .success-card, .chart-card {
+    border: none;
+    border-radius: 12px;
+}
+
+.card {
+    border-radius: 10px;
+}
+
+/* ---------- Success page ---------- */
+.success-icon {
+    font-size: 3rem;
+}
+
+.tracking-id-box {
+    background-color: #e7f1ff;
+    border: 1px dashed #0d6efd;
+    border-radius: 10px;
+    padding: 18px;
+}
+
+.tracking-id-value {
+    font-size: 1.9rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #0d47a1;
+    font-family: 'Courier New', monospace;
+}
+
+/* ---------- Status badges ---------- */
+.status-badge {
+    font-size: 0.9rem;
+    padding: 0.5em 0.9em;
+    border-radius: 30px;
+}
+
+.status-submitted {
+    background-color: #6c757d;
+    color: #fff;
+}
+
+.status-in-progress {
+    background-color: #ffc107;
+    color: #212529;
+}
+
+.status-resolved {
+    background-color: #198754;
+    color: #fff;
+}
+
+/* ---------- Severity badges ---------- */
+.severity-low {
+    background-color: #6c757d;
+    color: #fff;
+}
+
+.severity-medium {
+    background-color: #0dcaf0;
+    color: #212529;
+}
+
+.severity-high {
+    background-color: #fd7e14;
+    color: #fff;
+}
+
+.severity-critical {
+    background-color: #dc3545;
+    color: #fff;
+}
+
+/* ---------- Priority badges ---------- */
+.priority-low {
+    background-color: #e9ecef;
+    color: #495057;
+}
+
+.priority-medium {
+    background-color: #cfe2ff;
+    color: #084298;
+}
+
+.priority-high {
+    background-color: #ffe5b4;
+    color: #7a4a00;
+}
+
+.priority-urgent {
+    background-color: #dc3545;
+    color: #fff;
+}
+
+/* ---------- SLA badges ---------- */
+.sla-on-track {
+    background-color: #198754;
+    color: #fff;
+}
+
+.sla-overdue {
+    background-color: #dc3545;
+    color: #fff;
+}
+
+.sla-met {
+    background-color: #198754;
+    color: #fff;
+}
+
+.sla-met-late {
+    background-color: #fd7e14;
+    color: #fff;
+}
+
+.sla-unknown {
+    background-color: #adb5bd;
+    color: #fff;
+}
+
+/* ---------- Tracking page ---------- */
+.complaint-photo {
+    max-height: 320px;
+    border-radius: 8px;
+    border: 1px solid #dee2e6;
+}
+
+#refresh-indicator {
+    font-size: 0.9rem;
+}
+
+/* ---------- Dashboard ---------- */
+.chart-card canvas {
+    max-height: 260px;
+}
+
+.table thead th {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+}
+
+.heatmap-container {
+    height: 320px;
+    width: 100%;
+    border-radius: 8px;
+    z-index: 0;
+}
+
+/* ---------- GPS / Use My Location ---------- */
+#gps-status.text-success {
+    color: #198754 !important;
+}
+
+#gps-status.text-danger {
+    color: #dc3545 !important;
+}
+
+/* ---------- Mobile ---------- */
+@media (max-width: 576px) {
+    .tracking-id-value {
+        font-size: 1.4rem;
+    }
+
+    .table-responsive {
+        font-size: 0.85rem;
+    }
+}
